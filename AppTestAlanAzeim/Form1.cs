@@ -1,4 +1,5 @@
 using System.Diagnostics;
+using System.Diagnostics.Eventing.Reader;
 using static System.Net.WebRequestMethods;
 
 namespace AppTestAlanAzeim
@@ -74,6 +75,33 @@ namespace AppTestAlanAzeim
         {
             //llama a cmd y le dice que abra en el navegador predeterminado el link escrito
             System.Diagnostics.Process.Start("cmd", $"/c start {"https://github.com/Alan-Azeim-Rdz"}");
+        }
+
+        private void maskedTextBox1_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
+
+        private void ButIncrement_Click(object sender, EventArgs e)
+        {
+            int i = 0;
+
+            while (i < 100)
+            {
+                progressBar1.Value += 10;
+                return;
+            }
+
+        }
+
+        private void RadioYes_CheckedChanged(object sender, EventArgs e)
+        {
+            radioLeable.Text = "yes";
+        }
+
+        private void RadioNot_CheckedChanged(object sender, EventArgs e)
+        {
+            radioLeable.Text = "not";
         }
     }
 }
